@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width,inital-sacle=1.0" />
+    <link href="Styles/Style.css" rel="stylesheet" />
+    <script src="Scripts/carDetails.js"></script>
+
+    <script type="text/javascript">
+        var pathToYourImages = ["Images/02_Ferrari_Enzo.jpg", "Images/03_Porsche_Carrera_GT.jpg", "Images/01_Bugatti_Veyron.jpg"];
+        var canvas = null;
+        var contextForCanvas = null;
+        var image = null;
+        var currentImage = 0;
+        window.onload = function () {
+            canvas = document.getElementById('showCanvas');
+            contextForCanvas = canvas.getContext('2d');
+            image = document.createElement("img");
+
+            ImageSliding();
+
+            loadImageandHead();
+
+
+        };
+
+        function ImageSliding() {
+            image.setAttribute('src', pathToYourImages[currentImage]);
+            currentImage = currentImage === (pathToYourImages.length - 1) ? 0 : ++currentImage;
+            contextForCanvas.globalAlpha = 0.1;
+            setTimeout(ShowImage, 200);
+        }
+
+        function ShowImage() {
+            contextForCanvas.save();
+            contextForCanvas.clearRect(0, 0, canvas.width, canvas.height);
+            contextForCanvas.drawImage(image, 0, 0, image.width, image.height, 0, 0, canvas.width, canvas.height);
+            contextForCanvas.globalAlpha += 0.1;
+            contextForCanvas.globalAlpha > 0.9 ? setTimeout(ImageSliding, 3500) : setTimeout(ShowImage, 200);
+        }
+
+        function loadImageandHead() {
+            var i = 0;
+            var htmlOutput = "";
+            var name = "";
+            htmlOutput = '';
+            for (i = 6; i < 9; i++) {
+                name = 'details.html?id=' + carArray[i].id + '&hcode=H3345df34';
+                htmlOutput += '<div  class="section">';
+                htmlOutput += '<h3><a href="' + name + '">' + carArray[i].carName + '</a></h3>';
+
+                htmlOutput += '<a href="' + name + '"> <img src="images/' + carArray[i].filename + '" class="img-responsive" alt="' + carArray[i].filename + '"></a>';
+                htmlOutput += '</div>';
+            }
+            // htmlOutput += '</div>';
+
+            document.getElementById("details").innerHTML = htmlOutput;
+        }
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+
+        <header>
+            <div id="topHeader">
+                <div class="logo">
+                    LOGO
+                    <br />
+                    Logo
+                </div>
+                <div class="callUs">
+                    Call Us: 1811 XXXX
+                </div>
+            </div>
+            <div id="menuHeader">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="clea"></div>
+        <div id="contents">
+            <canvas id="showCanvas" width="285">
+                Canvas Not Support
+            </canvas>
+
+            <div class="=clea">
+
+            </div>
+            <div id="details">
+
+            </div>
+        </div>
+        <footer>
+            <div class="section">
+                <p>
+                    Mayor Street
+                    </br>
+                    IFSC
+                    <br />
+                    Dublin 1
+                </p>
+            </div>
+
+            <div id="social" class="section">
+                <p>Connect with Us :</p>
+                <ul>
+                    <li><a href="www.facebook.com"><img src="Images/facebook.png" /></a> </li>
+                    <li><a href="www.linkedin.com"><img src="Images/linkedin.png" /></a> </li>
+                    <li><a href="www.twitter.com"><img src="Images/twitter.png" /></a> </li>
+                </ul>
+            </div>
+            <div class="section">
+
+            </div>
+        </footer>
+    </div>
+    <p style="text-align:center"><small>© Copyright 2014, Josemon Philip</small></p>
+</body>
+</html>

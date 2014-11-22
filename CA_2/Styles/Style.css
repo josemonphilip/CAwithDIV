@@ -1,0 +1,266 @@
+﻿body {
+    background: #F1F0D1;
+    font-family: karala,helvetia,Arial,sans-serif;
+    font-size: 14px;
+    overflow: auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    padding-left: 5%;
+    color: #878E63;
+}
+
+p {
+    padding: 2%;
+}
+
+img {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+#wrapper {
+    margin: 0 auto;
+    max-width: 1020px;
+    width: 98%;
+    background: #FEFBE8;
+    border: 1px solid #878E63;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0px rgba(12,3,25,0.8);
+}
+
+#topHeader {
+    width: 100%;
+    height: auto;
+    background: #FFE300;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+}
+
+.callUs {
+    padding: 2%;
+    float: right;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header {
+    padding: 5px;
+    text-align: center;
+}
+
+#menuHeader {
+    background: #000;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 5px;
+}
+
+    nav ul li {
+        float: left;
+        border: 1px solid;
+        width: 15%;
+    }
+
+        nav ul li a {
+            background: #000;
+            display: block;
+            padding: 5% 12%;
+            font-weight: bold;
+            font-size: 18px;
+            color: #FFF;
+            text-decoration: none;
+            text-align: center;
+        }
+
+            nav ul li a:hover, nav ul li.active a {
+                background-color: #FFE300;
+                color: rgba(12,3,25,0.8);
+            }
+
+.section {
+    width: 29%;
+    float: left;
+    margin: 2%;
+    text-align: center;
+    /*border: 1px solid #878E63;
+    border-radius: 4px;*/
+}
+
+    .section h3 {
+        color: #F1F0D1;
+        background: #000;
+        margin-top: 0;
+        padding: 2%;
+    }
+
+        .section h3 a {
+            text-decoration: none;
+            padding: 2%;
+            color: #FEFBE8;
+            margin: 1%;
+        }
+
+    .section img {
+        width: 97%;
+    }
+
+footer {
+    background: #FFE300;
+    width: 100%;
+    overflow: hidden;
+}
+
+    footer p, footer h3 {
+        /*color: #F1F0D1;*/
+        text-decoration: none;
+    }
+
+#social ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#social li {
+    display: inline;
+}
+
+#social img {
+    border: none;
+    width: auto;
+    height: 18px;
+}
+
+.clea {
+    clear: both;
+}
+
+#contents {
+    overflow: hidden;
+}
+
+#showCanvas {
+    height: 500px;
+    border: 1px solid #878E63;
+    border-radius: 4px;
+    margin: 1%;
+}
+
+#details {
+    border: 1px solid #878E63;
+    margin: 1%;
+    overflow: hidden;
+}
+
+    #details h3 {
+        text-align: left;
+        padding: 0;
+    }
+
+    #details .image {
+        width: 25%;
+        min-height: 50px;
+        float: left;
+    }
+
+        #details .image img {
+            width: auto;
+            height: auto;
+            margin: 1%;
+        }
+
+    #details .ProductDetails {
+        padding: 1%;
+        margin: 1%;
+        width: 70%;
+        float: left;
+    }
+
+        #details .ProductDetails .price {
+            font-size: medium;
+        }
+
+        #details .ProductDetails .description {
+            margin: 1px;
+            padding: 1px;
+            line-height: 1.5;
+        }
+
+#Cardetails h2 {
+    text-align: left;
+    padding: 1%;
+    width: 97%;
+    background-color: #FFE300;
+}
+
+#Cardetails .image {
+    width: 50%;
+    min-height: 50px;
+    float: left;
+}
+
+    #Cardetails .image img {
+        width: auto;
+        height: auto;
+        margin: 1%;
+    }
+
+#Cardetails .ProductDetails {
+    padding: 1%;
+    margin: 1%;
+    width: 45%;
+    float: left;
+}
+
+    #Cardetails .ProductDetails .price {
+        font-size: medium;
+    }
+
+    #Cardetails .ProductDetails .description {
+        margin: 1px;
+        padding: 1px;
+        line-height: 1.5;
+    }
+
+.frm {
+    border: 1px solid #878E63;
+    border-radius: 4px;
+    margin: 1%;
+    padding:2%;
+    box-shadow: 0 0 10px 0px rgba(12,3,25,0.8);
+    width:50%;
+    float:right;
+}
+
+    .frm .row {
+        padding: 3%;
+    }
+
+        .frm .row .label {
+            width: 20%;
+            float: left;
+        }
+
+            .frm .row .inputs {
+                width: 80%;
+                float: left;
+            }
+                .frm .row .inputs input {
+                    width:100%;
+                }
+                .frm .row .inputs textarea {
+                    width:100%;
+                }
